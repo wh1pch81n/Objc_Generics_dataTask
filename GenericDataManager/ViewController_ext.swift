@@ -8,14 +8,37 @@
 
 import Foundation
 
+class BoxString {
+	var str: String
+	init?(_ s: String?) {
+		if let _s = s {
+			str = _s
+		} else {
+			return nil
+		}
+	}
+}
+
 extension ViewController {
 	public func doIt() {
 		let dataManager = GenericDataManager<NSString>()
 		
-		dataManager.dataTask(with: URLRequest(url: URL(string: "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC")!)
+		let urlRequest = URLRequest(url: URL(string: "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC")!)
+		
+		dataManager.dataTask(with: urlRequest
 			, dataProcessor: processor(_:)) {
-				print("", $0.0 ?? "")
+				print("a", $0.0 ?? "")
 		}
+		
+		let dataManagerBox = GenericDataManager<BoxString>()
+		
+		dataManagerBox.dataTask(with: urlRequest, dataProcessor: processorBox(_:)) {
+			print("b", $0.0?.str ?? "")
+		}
+	}
+	
+	private func processorBox(_ data: Data?) -> BoxString? {
+		return BoxString(processor(data) as String?)
 	}
 	
 	private func processor(_ data: Data?) -> NSString? {
