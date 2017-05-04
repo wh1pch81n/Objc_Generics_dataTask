@@ -10,14 +10,38 @@
 #import "GenericDataManager.h"
 #import "GenericDataManager-Swift.h"
 
+
+@implementation NSBox
+
+- (instancetype)initWithValue:(id)value {
+    if ((self = super.init)) {
+        _value = value;
+    }
+    return self;
+}
+
+@end
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+//- (GenericDataManager<NSDictionary<NSString *,id> *> *)arr_swift {
+//    return nil;//self->arr// _arr_swift ;//?: (_arr_swift = [[GenericDataManager<NSDictionary<NSString *, id>*> alloc] init]);
+//}
+
+- (void)setArr_swift:(GenericDataManager<NSDictionary<NSString *,id> *> *)arr_swift {}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    _arr_swift = [GenericDataManager new];
+    NSBox <NSString *>*box = [[NSBox <NSString *> alloc] initWithValue:@"Hello"];
+    
+    
+   NSArray <NSString *>*b = globalBox.value;
+    
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	//http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC
@@ -28,6 +52,18 @@
 	
 	[dataManager dataTaskWithRequest:request
 					   dataProcessor:^UIImage *_Nullable(NSData * _Nullable data) {
+                           
+                           if ((data = ([data isKindOfClass:[NSData class]]) ? data : nil)) {
+                               
+                           }
+                           
+                           {
+                               NSData *d;
+                               if ([(d = data) isKindOfClass:[NSData class]]) {
+                                   
+                               }
+                           }
+                           
 						   if (!data) return nil;
 						   
 						   NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
