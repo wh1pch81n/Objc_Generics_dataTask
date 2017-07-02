@@ -225,10 +225,18 @@
 			isa = PBXGroup;
 			children = (
 				7FA2E5FA1F0898F800D45C5A /* Box_Swift.h */,
-				7FA2E6051F08992A00D45C5A /* Box.swift */,
+				7FA2E6071F08A39700D45C5A /* Classes */,
 				7FA2E5FB1F0898F800D45C5A /* Info.plist */,
 			);
 			path = Box_Swift;
+			sourceTree = "<group>";
+		};
+		7FA2E6071F08A39700D45C5A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7FA2E6051F08992A00D45C5A /* Box.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

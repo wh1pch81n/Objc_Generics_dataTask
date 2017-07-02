@@ -9,6 +9,12 @@
 #import "NSBox.h"
 
 
+@implementation NSDataProcessor
+- (id)processData:(NSData *)data {
+    return data;
+}
+@end
+
 @implementation NSBox
 - (instancetype)initWithValue:(id)value {
     if (self = [super init]) {

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSBox <NSString *>*box;
 @property NSBox <NSNumber *>*nox;
 
+@property NSBox <NSDictionaryStringAny>* dox;
 @end
 
 NS_ASSUME_NONNULL_END

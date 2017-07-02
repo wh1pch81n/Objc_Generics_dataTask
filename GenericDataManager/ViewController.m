@@ -17,7 +17,7 @@
     if (self = [super init]) {
         _box = [[NSBox <NSString *>alloc] initWithValue:@"hi"];
         _nox = [[NSBox <NSNumber *>alloc] initWithValue:@(9)];
-        
+        _dox = [[NSBox alloc] initWithValue:@{@"a": @"b"}];
         
     }
     return self;
@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self experiment];
+    
+    NSData *d;
+    [[NSDataProcessor <NSString *>new] processData:d];
 }
 
 @end

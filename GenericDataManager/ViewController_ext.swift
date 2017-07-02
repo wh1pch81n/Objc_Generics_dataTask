@@ -23,13 +23,29 @@ extension NSObject {
     @objc func experiment() {
         let b = ViewController().box
         let n = ViewController().nox
+        let dd = ViewController().dox
+        
+        print(dd.dict)
         print(b.value_s)
+        _ = n.double
         n.method { (_b: Bool) in
             print("bool:", _b)
         }
         n.method { (_n: Int) in
             print("int:", _n)
         }
+        
+//        let d = Data()
+//        let s: String = NSDataProcessor<NSString>().processData(d)
+        
+        
+        
+        let d = Data()
+        let a = NSDataProcessor<NSArray>().processDataAsArrayOfInt(d)
+        
+        
+        print(a)
+        
     }
 }
 //

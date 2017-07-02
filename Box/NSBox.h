@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSDictionary<NSString *, id>* NSDictionaryStringAny;
+
+
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface NSDataProcessor <__covariant T: id> : NSObject
+- (T _Nullable)processData:(NSData *)data;
+@end
+
+NS_ASSUME_NONNULL_END
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSBox <__covariant T: id> : NSObject
