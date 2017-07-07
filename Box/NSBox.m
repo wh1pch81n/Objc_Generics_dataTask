@@ -8,6 +8,9 @@
 
 #import "NSBox.h"
 
+@implementation MyArray
+@end
+
 
 @implementation NSDataProcessor
 - (id)processData:(NSData *)data {
@@ -47,10 +50,8 @@
 }
 
 - (void)dataTaskWithRequest:(NSURLRequest *)urlRequest
-              dataProcessor:(NSDictionary<NSString *, id>*  _Nullable (^)(NSData * _Nullable))dataProcessor
-                 completion:(void (^)(NSDictionary<NSString *, id>* _Nullable
-                                      , NSURLResponse * _Nullable
-                                      , NSError * _Nullable))completion
+              dataProcessor:(id  _Nullable (^)(NSData * _Nullable))dataProcessor
+                 completion:(void (^)(id _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completion
 {
     id<URLSessionDataTaskProtocol> session = [urlSession dataTaskWithRequest:urlRequest
                                                            completionHandler:^(NSData * _Nullable data

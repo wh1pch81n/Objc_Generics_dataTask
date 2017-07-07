@@ -45,8 +45,3 @@ extension NSBox where T == NSNumber {
     }
 }
 
-extension NSBox where T == NSDictionaryStringAny {
-    public var dict: [String: Any] {
-        return (value as? [String: Any]) ?? [:]
-    }
-}

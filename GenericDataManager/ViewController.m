@@ -15,10 +15,9 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _box = [[NSBox <NSString *>alloc] initWithValue:@"hi"];
-        _nox = [[NSBox <NSNumber *>alloc] initWithValue:@(9)];
-        _dox = [[NSBox alloc] initWithValue:@{@"a": @"b"}];
-        
+        _box = [[NSBox<NSString *> alloc] initWithValue:@"hi"];
+        _nox = [[NSBox<NSNumber *> alloc] initWithValue:@(9)];
+        _gdm = [[GenericDataManager alloc] init];
     }
     return self;
 }

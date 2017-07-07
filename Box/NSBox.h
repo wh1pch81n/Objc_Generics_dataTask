@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NSDictionary<NSString *, id>* NSDictionaryStringAny;
+NS_ASSUME_NONNULL_BEGIN
 
+@interface MyArray<__covariant T>: NSObject
+@property (strong, nonatomic) NSArray<T> *array;
+@end
 
+NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -54,8 +58,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)dataTaskWithRequest:(NSURLRequest *)urlRequest
-              dataProcessor:(NSDictionary<NSString *, T>* _Nullable(^)(NSData *_Nullable data))dataProcessor1
-                 completion:(void(^)(NSDictionary<NSString *, T>* _Nullable data
+              dataProcessor:(T _Nullable (^)(NSData *_Nullable data))dataProcessor
+                 completion:(void(^)(T _Nullable data
                                      , NSURLResponse *_Nullable response
                                      , NSError *_Nullable error))completion;
 

@@ -23,9 +23,7 @@ extension NSObject {
     @objc func experiment() {
         let b = ViewController().box
         let n = ViewController().nox
-        let dd = ViewController().dox
         
-        print(dd.dict)
         print(b.value_s)
         _ = n.double
         n.method { (_b: Bool) in
@@ -35,17 +33,22 @@ extension NSObject {
             print("int:", _n)
         }
         
-//        let d = Data()
-//        let s: String = NSDataProcessor<NSString>().processData(d)
-        
-        
-        
         let d = Data()
-        let a = NSDataProcessor<NSArray>().processDataAsArrayOfInt(d)
+        let s: String? = NSDataProcessor<NSString>().processData(d)
+        print(s)
         
         
-        print(a)
+//        let d = Data()
+//        let a = NSDataProcessor<NSArray>().processDataAsArrayOfInt(d)
         
+        
+       // print(a)
+        ViewController().gdm.dataTask(with: URLRequest(url: URL(string: "")!)
+            , dataProcessor: { (d) -> MyArray<NSString>? in
+                return nil
+        }, completion: { (d, u, e) in
+            d?.array.first
+        })
     }
 }
 //

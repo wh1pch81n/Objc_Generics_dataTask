@@ -14,8 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ViewController: UIViewController
 @property NSBox <NSString *>*box;
 @property NSBox <NSNumber *>*nox;
-
-@property NSBox <NSDictionaryStringAny>* dox;
+@property GenericDataManager<MyArray<NSString *> *> *gdm;
 @end
 
 NS_ASSUME_NONNULL_END
