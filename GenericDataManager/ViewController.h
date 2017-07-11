@@ -12,9 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewController: UIViewController
-@property NSBox <NSString *>*box;
-@property NSBox <NSNumber *>*nox;
-@property GenericDataManager<MyArray<NSString *> *> *gdm;
+@property Resource<MyDictionary <NSString *, id> *> *wResource;
+@property WebService<MyDictionary <NSString *, id> *> *wService;
 @end
 
 NS_ASSUME_NONNULL_END
