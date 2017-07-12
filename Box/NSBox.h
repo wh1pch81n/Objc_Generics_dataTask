@@ -9,27 +9,25 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class GenericURLSession;
 
 @interface MyArray<__covariant T>: NSObject
 @property (strong, nonatomic) NSArray<T> *array;
 @end
 
-@interface MyDictionary<__covariant K, __covariant V>: NSObject
+@interface MyDictionary<__covariant K: NSString *, __covariant V>: NSObject
 @property (strong, nonatomic) NSDictionary<K, V> *dictionary;
 @end
 
-@class GenericURLSession;
-@interface Resource<__covariant PROCESSED_RESULT: id> : NSObject
-@property (strong) GenericURLSession *urlSession;
-@property (copy) NSURLRequest *(^urlRequest)(void);
-@property (copy) PROCESSED_RESULT _Nullable(^dataProcessor)(NSData *_Nullable data);
-- (instancetype)initWithURLRequest:(NSURLRequest *(^)(void))urlRequest
-                     dataProcessor:(PROCESSED_RESULT _Nullable(^)(NSData *_Nullable data))dataProcessor;
-@end
+@interface WebService<__covariant PROCESSED_RESULT: id, __covariant URL_SESSION: GenericURLSession *> : NSObject
 
-@interface WebService<__covariant PROCESSED_RESULT: id> : NSObject
-- (void)dataTaskWithResource:(Resource <PROCESSED_RESULT>*)resource
-                  completion:(void(^)(PROCESSED_RESULT _Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error))completion;
+@property URL_SESSION urlSession;
+
+- (instancetype)initWithURLSession:(URL_SESSION)urlSession;
+
+- (void)dataTaskWithURLRequest:(NSURLRequest *(^)(void))urlRequest
+                 dataProcessor:(PROCESSED_RESULT _Nullable(^)(NSData *_Nullable data))dataProcessor
+                    completion:(void(^)(PROCESSED_RESULT _Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error))completion;
 @end
 
 @protocol URLSessionDataTaskProtocol <NSObject>

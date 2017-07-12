@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 @import Box;
 
+@interface SimpleDataSession: GenericURLSession
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewController: UIViewController
-@property Resource<MyDictionary <NSString *, id> *> *wResource;
-@property WebService<MyDictionary <NSString *, id> *> *wService;
+@property WebService<MyDictionary <NSString *, id> *, SimpleDataSession *> *wService;
 @end
 
 NS_ASSUME_NONNULL_END

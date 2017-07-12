@@ -13,24 +13,26 @@
 @implementation MyDictionary
 @end
 
-@implementation Resource
-- (instancetype)initWithURLRequest:(NSURLRequest * _Nonnull (^)(void))urlRequest dataProcessor:(id  _Nullable (^)(NSData * _Nonnull))dataProcessor {
+@implementation WebService
+
+- (instancetype)initWithURLSession:(GenericURLSession *)urlSession {
     if (self = [super init]) {
-        _urlSession = [GenericURLSession new];
-        _urlRequest = urlRequest;
-        _dataProcessor = dataProcessor;
+        _urlSession = urlSession;
     }
     return self;
 }
-@end
 
-@implementation WebService
-- (void)dataTaskWithResource:(Resource *)resource completion:(void (^)(id _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completion {
-    [[resource.urlSession dataTaskWithRequest:resource.urlRequest()
-                            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                completion(resource.dataProcessor(data), response, error);
-                            }] resume];
+- (void)dataTaskWithURLRequest:(NSURLRequest *(^)(void))urlRequest dataProcessor:(id  _Nullable (^)(NSData * _Nullable))dataProcessor completion:(void (^)(id _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completion
+{
+    id<URLSessionDataTaskProtocol> dataTask;
+    dataTask = [_urlSession dataTaskWithRequest:urlRequest()
+                   completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                       completion(dataProcessor(data), response, error);
+                   }];
+    
+    [dataTask resume];
 }
+
 @end
 
 @implementation GenericURLSession
