@@ -20,7 +20,7 @@ public protocol DataProcessor {
 }
 
 extension SimpleDataSession: URLRequestMaker {
-    @objc public func urlRequest(_ data: NSNull? = nil) -> () -> URLRequest {
+    @objc public func urlRequest(_ data: NSNull = NSNull()) -> () -> URLRequest {
         return {
             URLRequest(url: URL(string: "https://api.myjson.com/bins/e4xc3")!)
         }
@@ -62,14 +62,13 @@ extension NSObject {
 //        })
         
         // global function `Warm` has no issues inverring the Template type
-        Warm(ViewController.dataTask).dataTask(query: nil
-            , completion: { (d, r, e) in
+        Warm(ViewController.dataTask).dataTask(completion: { (d, r, e) in
                 print(d!.dictionary.keys.first!)
                 print(d!.dictionary.values.first!)
         })
         
         // A method also has no issues inferring the Template type
-        Hot().hot(ViewController.dataTask).dataTask(query: nil
+        Hot().hot(ViewController.dataTask).dataTask(query: NSNull()
             , completion: { (d, r, e) in
                 print(d!.dictionary.keys.first!)
                 print(d!.dictionary.values.first!)
@@ -97,6 +96,11 @@ extension Cool {
     
     public static func cool<PR, S>(_ webservice: WebService<PR, S>) -> Cool<PR, S> {
         return Cool<PR, S>(webService: webservice)
+    }
+}
+extension Cool where S.QUERY_TYPE == NSNull {
+    public func dataTask(completion: @escaping (PR?, URLResponse?, Error?) -> ()) {
+        dataTask(query: NSNull(), completion: completion)
     }
 }
 
