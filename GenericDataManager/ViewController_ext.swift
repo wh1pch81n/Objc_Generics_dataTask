@@ -55,7 +55,7 @@ extension NSObject {
         })
         
         //Generic Parameter could not be inferred
-//        Cool.cool(ViewController.dataTask).dataTask(query: ()
+//        Cool(ViewController.dataTask).dataTask(query: ()
 //            , completion: { (d, r, e) in
 //                print(d!.dictionary.keys.first!)
 //                print(d!.dictionary.values.first!)
