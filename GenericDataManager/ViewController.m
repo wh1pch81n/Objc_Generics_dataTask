@@ -28,7 +28,7 @@
     [self experiment];
     
     SimpleDataSession *ss = _wService.urlSession;
-    [_wService dataTaskWithURLRequest:[ss urlRequest:nil]
+    [_wService dataTaskWithURLRequest:[ss urlRequest:[NSNull null]]
                         dataProcessor:[ss dataProcessor]
                            completion:^(MyDictionary<NSString *,id> * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                                NSLog(@"%@", data.dictionary.allKeys.firstObject);
