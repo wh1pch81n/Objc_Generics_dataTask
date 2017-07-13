@@ -46,6 +46,7 @@ extension ViewController {
 
 extension NSObject {
     @objc func experiment() {
+        // Using raw method call
         let session = ViewController.dataTask.urlSession
         ViewController.dataTask.dataTask(urlRequest: session.urlRequest()
             , dataProcessor: session.dataProcessor()
@@ -54,35 +55,21 @@ extension NSObject {
                 print(d!.dictionary.values.first!)
         })
         
-        //Generic Parameter could not be inferred
-//        Cool(ViewController.dataTask).dataTask(query: ()
-//            , completion: { (d, r, e) in
-//                print(d!.dictionary.keys.first!)
-//                print(d!.dictionary.values.first!)
-//        })
-        
-        // global function `Warm` has no issues inverring the Template type
-        Warm(ViewController.dataTask).dataTask(completion: { (d, r, e) in
-                print(d!.dictionary.keys.first!)
-                print(d!.dictionary.values.first!)
-        })
-        
-        // A method also has no issues inferring the Template type
-        Hot().hot(ViewController.dataTask).dataTask(query: NSNull()
-            , completion: { (d, r, e) in
-                print(d!.dictionary.keys.first!)
-                print(d!.dictionary.values.first!)
+        // Wrapping in a struct to make it more swifty
+        Cool(ViewController.dataTask).dataTask(completion: { (d, r, e) in
+            print(d!.dictionary.keys.first!)
+            print(d!.dictionary.values.first!)
         })
     }
 }
-
-
 
 public struct Cool<PR,S>
     where PR: AnyObject, S: GenericURLSession, S: DataProcessor, S: URLRequestMaker
 {
     let webService: WebService<PR,S>
-    //let urlSession: S
+    public init(_ webService: WebService<PR, S>) {
+        self.webService = webService
+    }
 }
 
 extension Cool {
@@ -93,24 +80,11 @@ extension Cool {
             , dataProcessor: dp
             , completion: completion)
     }
-    
-    public static func cool<PR, S>(_ webservice: WebService<PR, S>) -> Cool<PR, S> {
-        return Cool<PR, S>(webService: webservice)
-    }
 }
+
 extension Cool where S.QUERY_TYPE == NSNull {
     public func dataTask(completion: @escaping (PR?, URLResponse?, Error?) -> ()) {
         dataTask(query: NSNull(), completion: completion)
-    }
-}
-
-public func Warm<PR, S>(_ webservice: WebService<PR, S>) -> Cool<PR, S> {
-    return Cool<PR, S>(webService: webservice)
-}
-
-public struct Hot {
-    func hot<PR, S>(_ webservice: WebService<PR, S>) -> Cool<PR, S> {
-        return Cool<PR, S>(webService: webservice)
     }
 }
 
