@@ -15,7 +15,7 @@ public protocol URLRequestMaker {
     func urlRequest(_ query: QUERY_TYPE) -> () -> URLRequest
 }
 public protocol DataProcessor {
-    associatedtype PROCESSED_TYPE
+    associatedtype PROCESSED_TYPE: AnyObject
     func dataProcessor() -> (Data?) -> PROCESSED_TYPE?
 }
 
@@ -64,6 +64,12 @@ extension NSObject {
             print(d!.dictionary.keys.first!)
             print(d!.dictionary.values.first!)
         })
+        
+        // Using Cool_Objc to produce  Webservice object.  Generics inferred!
+        let m = Cool_Objc(SimpleDataSession())
+//        m.dataTask(urlRequest: <#T##() -> URLRequest#>
+//            , dataProcessor: <#T##(Data?) -> MyDictionary<NSString, AnyObject>?#>
+//            , completion: <#T##(MyDictionary<NSString, AnyObject>?, URLResponse?, Error?) -> Void#>)
     }
 }
 
@@ -92,3 +98,8 @@ extension Cool where S.QUERY_TYPE == NSNull {
     }
 }
 
+public func Cool_Objc<S>(_ urlSession: S) -> WebService<S.PROCESSED_TYPE, S>
+    where S: GenericURLSession, S: DataProcessor, S: URLRequestMaker
+{
+    return WebService<S.PROCESSED_TYPE, S>.init(urlSession: urlSession)
+}
