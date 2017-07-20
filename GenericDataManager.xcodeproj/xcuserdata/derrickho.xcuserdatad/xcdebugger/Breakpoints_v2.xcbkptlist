@@ -9,14 +9,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GenericDataManager/ViewController.m"
-            timestampString = "522213722.952086"
+            filePath = "Box/Helper.m"
+            timestampString = "522216025.010381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-makeQuery:completion:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WebService(extension) makeQuery:completion:]"
+                  moduleName = "Box"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
+                  timestampString = "522216025.32257"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WebService(extension) makeQuery:completion:]"
+                  moduleName = "Box"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
+                  timestampString = "522216025.326636"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Box/Helper.m"
+            timestampString = "522216025.010506"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "-makeQuery:completion:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WebService(extension) makeQuery:completion:]"
+                  moduleName = "Box"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
+                  timestampString = "522216025.332515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "457">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WebService(extension) makeQuery:completion:]"
+                  moduleName = "Box"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
+                  timestampString = "522216025.33807"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "574">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

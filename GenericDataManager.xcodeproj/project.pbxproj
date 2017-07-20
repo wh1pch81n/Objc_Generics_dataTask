@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F325FDD1F20580B00A3FCCA /* Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F325FDC1F2057D000A3FCCA /* Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F325FDF1F20617700A3FCCA /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F325FDB1F2057D000A3FCCA /* Helper.m */; };
 		7F698BC91EB2C5550094AF76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F698BC81EB2C5550094AF76 /* main.m */; };
 		7F698BCC1EB2C5550094AF76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F698BCB1EB2C5550094AF76 /* AppDelegate.m */; };
 		7F698BCF1EB2C5550094AF76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F698BCE1EB2C5550094AF76 /* ViewController.m */; };
@@ -438,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA2E5F01F08855400D45C5A /* NSBox.m in Sources */,
+				7F325FDF1F20617700A3FCCA /* Helper.m in Sources */,
 				7FA2E5F21F088CE500D45C5A /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

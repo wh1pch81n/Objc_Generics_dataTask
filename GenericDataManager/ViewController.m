@@ -15,15 +15,9 @@
 
 @implementation ViewController 
 
-- (instancetype)init {
-    if (self = [super init]) {
-        _wService = [WebService new];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _wService = [[WebService alloc] initWithURLSession:[SimpleDataSession new]];
     [self experiment];
     self.label.text = @"bread";
     UILabel *l = [UILabel new];
@@ -38,7 +32,7 @@
                         dataProcessor:[ss dataProcessor]
                            completion:^(MyDictionary<NSString *,id> * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                                NSLog(@"1 key: %@", data.dictionary.allKeys.firstObject);
-                               NSLog(@"2 value: %@", data.dictionary.allValues.firstObject);
+                               NSLog(@"1 value: %@", data.dictionary.allValues.firstObject);
                            }];
 
     [_wService makeQuery:nil
