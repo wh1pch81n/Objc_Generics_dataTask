@@ -46,6 +46,10 @@ extension ViewController {
 
 extension NSObject {
     @objc func experiment() {
+        
+        let l = UILabel()
+        l.text = "hello"
+        
         // Using raw method call
         let session = ViewController.dataTask.urlSession
         ViewController.dataTask.dataTask(urlRequest: session.urlRequest()

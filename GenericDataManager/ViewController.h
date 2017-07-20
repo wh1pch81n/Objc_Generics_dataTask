@@ -15,6 +15,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewController: UIViewController
+
+@property (weak) IBOutlet UILabel *label;
+
 @property WebService<MyDictionary <NSString *, id> *, SimpleDataSession *> *wService;
 @end
 

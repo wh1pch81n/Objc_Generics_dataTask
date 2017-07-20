@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char BoxVersionString[];
 
 
 #import <Box/NSBox.h>
+#import <Box/Helper.h>
