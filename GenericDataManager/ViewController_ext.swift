@@ -103,3 +103,46 @@ public func Cool_Objc<S>(_ urlSession: S) -> WebService<S.PROCESSED_TYPE, S>
 {
     return WebService<S.PROCESSED_TYPE, S>.init(urlSession: urlSession)
 }
+
+////////////
+
+extension AppDelegate {
+    
+    func mock_dataSessions() {
+        
+        #if DEBUG
+            class Mock_SimpleDataSession: SimpleDataSession, URLSessionDataTaskProtocol {
+                func json() -> [String: Any]? {
+                    let jsonString = ProcessInfo.processInfo.environment["MockURLData"]
+                    let json = jsonString.flatMap({ $0.data(using: .utf8) })
+                        .flatMap({ try? JSONSerialization.jsonObject(with: $0, options: []) })
+                    return json as? [String: Any]
+                }
+                
+                override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+                {
+                    if let j = json()
+                        , let _url = request.url
+                        , let value = j[_url.absoluteString] as? [String: Any]
+                        , let jsonData = (try? JSONSerialization.data(withJSONObject: value, options: []))
+                    {
+                        _resume = { completionHandler(jsonData, nil, nil) }
+                    } else {
+                        _resume = { completionHandler(nil, nil, NSError(domain: "", code: 0, userInfo: nil)) }
+                    }
+                    return self
+                }
+                var _resume: () -> () = {}
+                func resume() {
+                    _resume()
+                }
+            }
+            
+            // overrides
+            ViewController.dataTask.urlSession = Mock_SimpleDataSession()
+        #else
+            print("Not in debug mode")
+        #endif
+    }
+    
+}

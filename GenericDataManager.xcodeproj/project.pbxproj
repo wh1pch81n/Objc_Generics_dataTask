@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F05E96A1F23989A00B44DAF /* GenericDataManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05E9691F23989A00B44DAF /* GenericDataManagerUITests.swift */; };
+		7F05E9721F23994B00B44DAF /* MockData1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F05E9711F23994B00B44DAF /* MockData1.json */; };
 		7F325FDD1F20580B00A3FCCA /* Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F325FDC1F2057D000A3FCCA /* Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F325FDF1F20617700A3FCCA /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F325FDB1F2057D000A3FCCA /* Helper.m */; };
 		7F698BC91EB2C5550094AF76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F698BC81EB2C5550094AF76 /* main.m */; };
@@ -32,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7F05E96C1F23989A00B44DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F698BBC1EB2C5550094AF76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F698BC31EB2C5550094AF76;
+			remoteInfo = GenericDataManager;
+		};
 		7FA2E5D81F08851F00D45C5A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F698BBC1EB2C5550094AF76 /* Project object */;
@@ -78,6 +87,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F05E9671F23989A00B44DAF /* GenericDataManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenericDataManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F05E9691F23989A00B44DAF /* GenericDataManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataManagerUITests.swift; sourceTree = "<group>"; };
+		7F05E96B1F23989A00B44DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F05E9711F23994B00B44DAF /* MockData1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData1.json; sourceTree = "<group>"; };
 		7F325FDB1F2057D000A3FCCA /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		7F325FDC1F2057D000A3FCCA /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		7F698BC41EB2C5550094AF76 /* GenericDataManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenericDataManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +121,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F05E9641F23989A00B44DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F698BC11EB2C5550094AF76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +163,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F05E9681F23989A00B44DAF /* GenericDataManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F05E9691F23989A00B44DAF /* GenericDataManagerUITests.swift */,
+				7F05E9711F23994B00B44DAF /* MockData1.json */,
+				7F05E96B1F23989A00B44DAF /* Info.plist */,
+			);
+			path = GenericDataManagerUITests;
+			sourceTree = "<group>";
+		};
 		7F698BBB1EB2C5550094AF76 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +180,7 @@
 				7FA2E5CF1F08851F00D45C5A /* Box */,
 				7FA2E5DC1F08851F00D45C5A /* BoxTests */,
 				7FA2E5F91F0898F800D45C5A /* Box_Swift */,
+				7F05E9681F23989A00B44DAF /* GenericDataManagerUITests */,
 				7F698BC51EB2C5550094AF76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -161,6 +192,7 @@
 				7FA2E5CE1F08851F00D45C5A /* Box.framework */,
 				7FA2E5D61F08851F00D45C5A /* BoxTests.xctest */,
 				7FA2E5F81F0898F800D45C5A /* Box_Swift.framework */,
+				7F05E9671F23989A00B44DAF /* GenericDataManagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +296,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7F05E9661F23989A00B44DAF /* GenericDataManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F05E96E1F23989A00B44DAF /* Build configuration list for PBXNativeTarget "GenericDataManagerUITests" */;
+			buildPhases = (
+				7F05E9631F23989A00B44DAF /* Sources */,
+				7F05E9641F23989A00B44DAF /* Frameworks */,
+				7F05E9651F23989A00B44DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F05E96D1F23989A00B44DAF /* PBXTargetDependency */,
+			);
+			name = GenericDataManagerUITests;
+			productName = GenericDataManagerUITests;
+			productReference = 7F05E9671F23989A00B44DAF /* GenericDataManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7F698BC31EB2C5550094AF76 /* GenericDataManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F698BDB1EB2C5550094AF76 /* Build configuration list for PBXNativeTarget "GenericDataManager" */;
@@ -345,9 +395,14 @@
 		7F698BBC1EB2C5550094AF76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Derrick Ho";
 				TargetAttributes = {
+					7F05E9661F23989A00B44DAF = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 7F698BC31EB2C5550094AF76;
+					};
 					7F698BC31EB2C5550094AF76 = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0900;
@@ -384,11 +439,20 @@
 				7FA2E5CD1F08851F00D45C5A /* Box */,
 				7FA2E5D51F08851F00D45C5A /* BoxTests */,
 				7FA2E5F71F0898F800D45C5A /* Box_Swift */,
+				7F05E9661F23989A00B44DAF /* GenericDataManagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F05E9651F23989A00B44DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F05E9721F23994B00B44DAF /* MockData1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F698BC21EB2C5550094AF76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +487,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F05E9631F23989A00B44DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F05E96A1F23989A00B44DAF /* GenericDataManagerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F698BC01EB2C5550094AF76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +535,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7F05E96D1F23989A00B44DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F698BC31EB2C5550094AF76 /* GenericDataManager */;
+			targetProxy = 7F05E96C1F23989A00B44DAF /* PBXContainerItemProxy */;
+		};
 		7FA2E5D91F08851F00D45C5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7FA2E5CD1F08851F00D45C5A /* Box */;
@@ -505,6 +582,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7F05E96F1F23989A00B44DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GenericDataManagerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnthome.GenericDataManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GenericDataManager;
+			};
+			name = Debug;
+		};
+		7F05E9701F23989A00B44DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = GenericDataManagerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dnthome.GenericDataManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GenericDataManager;
+			};
+			name = Release;
+		};
 		7F698BD91EB2C5550094AF76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -624,6 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dnthome.GenericDataManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "GenericDataManager/GenericDataManager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -828,6 +944,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F05E96E1F23989A00B44DAF /* Build configuration list for PBXNativeTarget "GenericDataManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F05E96F1F23989A00B44DAF /* Debug */,
+				7F05E9701F23989A00B44DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7F698BBF1EB2C5550094AF76 /* Build configuration list for PBXProject "GenericDataManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

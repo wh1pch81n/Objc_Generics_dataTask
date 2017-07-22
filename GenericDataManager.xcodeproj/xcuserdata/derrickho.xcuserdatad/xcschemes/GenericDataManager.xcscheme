@@ -67,6 +67,16 @@
                ReferencedContainer = "container:GenericDataManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7F05E9661F23989A00B44DAF"
+               BuildableName = "GenericDataManagerUITests.xctest"
+               BlueprintName = "GenericDataManagerUITests"
+               ReferencedContainer = "container:GenericDataManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

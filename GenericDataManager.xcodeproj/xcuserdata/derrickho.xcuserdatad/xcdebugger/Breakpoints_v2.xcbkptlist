@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Box/Helper.m"
-            timestampString = "522216025.010381"
+            filePath = "GenericDataManager/ViewController_ext.swift"
+            timestampString = "522428072.257999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-makeQuery:completion:"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "resume()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WebService(extension) makeQuery:completion:]"
-                  moduleName = "Box"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
-                  timestampString = "522216025.32257"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WebService(extension) makeQuery:completion:]"
-                  moduleName = "Box"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
-                  timestampString = "522216025.326636"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "176">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,46 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Box/Helper.m"
-            timestampString = "522216025.010506"
+            filePath = "GenericDataManager/ViewController_ext.swift"
+            timestampString = "522428072.258143"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-makeQuery:completion:"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "dataTask(with:completionHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WebService(extension) makeQuery:completion:]"
-                  moduleName = "Box"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
-                  timestampString = "522216025.332515"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "457">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[WebService(extension) makeQuery:completion:]"
-                  moduleName = "Box"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/derrickho/Downloads/objcGenerics/Objc_Generics_dataTask/Box/Helper.m"
-                  timestampString = "522216025.33807"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "574">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GenericDataManager/ViewController_ext.swift"
+            timestampString = "522428072.258255"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "json()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GenericDataManagerUITests/GenericDataManagerUITests.swift"
+            timestampString = "522428072.258367"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testExample()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
